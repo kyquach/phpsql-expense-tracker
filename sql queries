@@ -1,0 +1,41 @@
+
+
+
+
+
+
+
+
+
+CREATE TABLE expense_table (
+    id INT(11) NOT NULL AUTO_INCREMENT, 
+    expense_name VARCHAR(30) NOT NULL,
+    category_name VARCHAR(30) NOT NULL,
+    amount int(11) NOT NULL, 
+    due_date DATETIME NOT NULL DEFAULT CURRENT_DATE,
+    PRIMARY KEY (id)
+    );
+
+
+
+INSERT INTO expense_table(expense_name, category_name, amount, due_date) 
+    VALUES ($_POST["_expense_name"], 
+            $_POST["_category"], 
+            $_POST["_amount"], 
+            $_POST["_due_date"])
+
+
+
+UPDATE expense_table SET 
+    expense_name = $_POST["_expense_name"], 
+    expense_name = $_POST["_expense_name"],
+    expense_name = $_POST["_expense_name"],
+    expense_name = $_POST["_expense_name"] 
+    WHERE expense_name = $_POST["_target_name"] OR id = $_POST["_ID"]
+
+DELETE FROM expense_table WHERE
+    expense_name = $_POST["_target_name"] OR
+    id = $_post["id"]
+
+
+DELETE FROM table_name;
